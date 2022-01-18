@@ -6,20 +6,6 @@
 #include <glut.h>
 #include <time.h>
 #include <conio.h>
-//TODO
-// open file in r (if ==null -> error)
-// read scores from files into struct array ?dynamic?
-// print top/leading five scores to terminal
-// close file
-// open file in a
-// adding current player(append) score if WIN
-// close file
-// open file in r
-// sort all scores in struct array
-// close file
-// open file in w
-// write all (sorted) scores to file
-// close file
 
 #define _USE_MATH_DEFINES
 #include <math.h>
