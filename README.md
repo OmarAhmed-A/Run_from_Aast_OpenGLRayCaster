@@ -1,4 +1,4 @@
-# OpenGL-raycaster-AAST
+# OpenGL-raycaster
 
 This code was originally forked from 3dsage some added features were:
 
