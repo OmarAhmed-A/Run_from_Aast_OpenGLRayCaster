@@ -50,9 +50,9 @@ typedef struct player //player name and score
      char name[30];
 } player;
 player p;
-player all[20];
+player all[Maxplayers];
 
-typedef struct
+typedef struct ButtonKeys
 {
      int w, a, d, s; //button state on off
 } ButtonKeys;
@@ -100,7 +100,7 @@ int mapC[] = //ceiling
         0,0,0,0,0,0,0,0,
 };
 
-typedef struct //All veriables per sprite
+typedef struct sprite //All veriables per sprite
 {
      int type;      //static, key, enemy
      int state;     //on off
@@ -616,7 +616,7 @@ void display()
                clock_t tok = clock();
                double time_spent = (double)(tok - tik) / CLOCKS_PER_SEC;
                p.score=time_spent;
-               printf("\n%s's score was %.2f ", p.name, time_spent);
+               printf("\n%s's score was %.2f ", p.name, p.score);
                fptr = fopen("scores.txt","a");
                fprintf(fptr,"\n%s %.2f",p.name,p.score);
                fclose(fptr);
@@ -724,7 +724,7 @@ void resize(int w, int h) //screen window rescaled, snap back
 {
      glutReshapeWindow(960, 640);
 }
-void bsortDesc(struct player list[20], int s)
+void bsortStruct(struct player list[20], int s)
 {
     int i, j;
     player temp;
@@ -734,7 +734,7 @@ void bsortDesc(struct player list[20], int s)
         for (j = 0; j < (s - 1-i); j++)
         {
              if(list[j].name!="@")
-            if (list[j].score > list[j + 1].score)
+            if (list[j].score > list[j + 1].score)//strcmp(list[j].name , list[j + 1].name)>0 condition to sort by name
             {
                 temp = list[j];
                 list[j] = list[j + 1];
@@ -773,14 +773,14 @@ int main(int argc, char *argv[])
      }
      fclose(fptr);
 
-     bsortDesc(all,n);   //sort all scores in struct array
+     bsortStruct(all,n);   //sort all scores in struct array
 
      fptr = fopen("scores.txt","w");
      if(fptr == NULL)
      printf("Error opening scores file");
-     for (int e = 0; e < n; e++)
+     for (int e = 0; e < n-1; e++)
      {
-          if(e==n-1)
+          if(e==n-2)
          fprintf(fptr,"%s %.2f",all[e].name,all[e].score);
           else
           fprintf(fptr,"%s %.2f\n",all[e].name,all[e].score);
