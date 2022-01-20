@@ -1,11 +1,12 @@
 # OpenGL-raycaster
 
-![](raycaster.gif)
-This code was originally forked from 3dsage some added features were:
+![gif illustrating the game](raycaster.gif)
 
-  1. stopping game loop when win or lose state is encountered
-  2. storing score at the end of the game in a file
-     * sorting all scores and displaying top scores
-  3. bug fixes
+other features not shown in gif
+*saving score of winning players
+*sorting scores by best time
+*showing the top five scores when game is started
+
+this game was made as a project for CC-212 at AAST university by Omar Ahmed (20107196)
 
 to play use WASD to move and press E to open doors
