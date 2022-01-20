@@ -1,5 +1,6 @@
 # OpenGL-raycaster
 
+![](raycaster.gif)
 This code was originally forked from 3dsage some added features were:
 
   1. stopping game loop when win or lose state is encountered
