@@ -2,16 +2,20 @@
 # OpenGL-raycaster
 
 ![gif illustrating the game](raycaster.gif)
-## About:
+
+## About
+
 This game was made as a project for CC-212 (Applied programming course) at AAST university by Omar Ahmed (20107196), semester 3.
 
-## Other features not shown in gif:
- - saving score of winning players.
- - sorting scores by best time.
- - showing the top five scores when game is started.
- - very easy to edit map or create new level in source.
- 
-## Controls:
+## Other features not shown in gif
+
+- saving score of winning players.
+- sorting scores by best time.
+- showing the top five scores when game is started.
+- very easy to edit map or create new level in source.
+
+## Controls
+
 to move around use WASD and open doors by pressing E
 (Don't let the monster touch you...)
 
@@ -26,4 +30,3 @@ to build from source just make sure to link glut which is a deprecated opengl li
 [freeglut install guide](http://freeglut.sourceforge.net/docs/install.php)
 
 VScode build files included could be run to build from source if you have glut library in your compiler's include folder.
-
