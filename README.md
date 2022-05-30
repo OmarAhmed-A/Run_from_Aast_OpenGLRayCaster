@@ -31,4 +31,4 @@ to build from source just make sure to link glut which is a deprecated opengl li
 
 VScode build files included could be run to build from source if you have glut library in your compiler's include folder.
 
-[GIF]: https://media.giphy.com/media/zmTNhRsSOmhQtvD6xs/giphy.gif
+[GIF]: https://media.giphy.com/media/zmTNhRsSOmhQtvD6xs/giphy-downsized-large.gif
