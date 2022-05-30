@@ -1,7 +1,7 @@
 
 # OpenGL-raycaster
 
-![gif illustrating the game] [GIF]
+![gif illustrating the game][GIF]
 
 ## About
 
