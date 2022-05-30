@@ -1,7 +1,7 @@
 
 # OpenGL-raycaster
 
-![gif illustrating the game][GIF]
+![gif illustrating the game] [GIF]
 
 ## About
 
@@ -31,4 +31,4 @@ to build from source just make sure to link glut which is a deprecated opengl li
 
 VScode build files included could be run to build from source if you have glut library in your compiler's include folder.
 
-[GIF]:raycaster.gif
+[GIF]: https://media.giphy.com/media/3Cok0DST62w1QAAAP5/giphy.gif
