@@ -3,9 +3,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <glut.h>
 #include <time.h>
 #include <conio.h>
+
+#include <glut.h> // OpenGL Graphics Utility Library (GLUT)
 
 #define _USE_MATH_DEFINES
 #include <math.h>
