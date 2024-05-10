@@ -183,7 +183,7 @@ void drawSprite()
                          int red = sprites[pixel + 0];
                          int green = sprites[pixel + 1];
                          int blue = sprites[pixel + 2];
-                         if (red != 255, green != 0, blue != 255) //dont draw if purple
+                         if (red != 255 && green != 0 && blue != 255) //dont draw if purple
                          {
                               glPointSize(8);
                               glColor3ub(red, green, blue);
