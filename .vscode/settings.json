@@ -2,4 +2,7 @@
     "files.associations": {
         "*.ppm": "c",
     },
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "clang-diagnostic-error"
+    ],
 }
