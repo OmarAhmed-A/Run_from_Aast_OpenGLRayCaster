@@ -1,4 +1,3 @@
-@ 0.00
 ferry 10.11
 nadine 15.10
 miroo 16.31
@@ -10,5 +9,3 @@ mahmoud 38.65
 ibrahim 42.56
 last 43.10
 ahmed 55.66
-asd 64.10
-X 78.10
