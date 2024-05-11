@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"configurations": [
+		{
+			"name": "C/C++: bld&dbg",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"preLaunchTask": "C/C++: gcc.exe build active file",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+			"miDebuggerArgs": "",
+			"serverLaunchTimeout": 5000
+		}
+	]
+}
