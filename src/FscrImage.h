@@ -15,6 +15,10 @@ void imageFullScr(int v) //draw any full screen image. 120x80 pixels
      {
           T = lost;
      }
+     if (v == 4)
+     {
+          T = lvl2;
+     }
      for (y = 0; y < 80; y++)
      {
           for (x = 0; x < 120; x++)

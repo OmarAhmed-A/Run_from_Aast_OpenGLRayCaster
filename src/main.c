@@ -12,7 +12,9 @@
 #include <math.h>
 
 #include "../Textures/All_Textures.ppm"
+#include "../Textures/lvl2.ppm"
 #include "../Textures/sky.ppm"
+#include "../Textures/sky2.ppm"
 #include "../Textures/title.ppm"
 #include "../Textures/won.ppm"
 #include "../Textures/lost.ppm"
@@ -73,7 +75,10 @@ float distance(ax,ay,bx,by,ang){ return cos(degToRad(ang))*(bx-ax)-sin(degToRad(
 // init all variables when game starts
 void init()
 {
+
+     sky = sky1;
      glClearColor(0.3, 0.3, 0.3, 0);
+     lvl = 1;
      px = 150;
      py = 400;
      pa = 90;
@@ -103,6 +108,39 @@ void init()
      sp[2].x = 3.5 * 64;
      sp[2].y = 4.5 * 64;
      sp[2].z = 0; // light 2
+
+     sp[3].type = 3;
+     sp[3].state = 1;
+     sp[3].map = 2;
+     sp[3].x = 2.5 * 64;
+     sp[3].y = 2 * 64;
+     sp[3].z = 20; // enemy
+}
+void init2()
+{
+     sky = sky2;
+
+     glClearColor(0.3, 0.3, 0.3, 0);
+     lvl = 2;
+     px = 150;
+     py = 400;
+     pa = 90;
+     pdx = cos(degToRad(pa));
+     pdy = -sin(degToRad(pa)); // init player
+
+     // mapW = mapW2;
+     for (int i=0; i<mapS; mapW[i]=mapW2[i], i++);
+
+
+
+
+     sp[0].type = 1;
+     sp[0].state = 1;
+     sp[0].map = 0;
+     sp[0].x = 1.5 * 64;
+     sp[0].y = 5 * 64;
+     sp[0].z = 20; // key
+
 
      sp[3].type = 3;
      sp[3].state = 1;
@@ -204,8 +242,27 @@ void display()
           {
                fade = 0;
                timer = 0;
+
+               if(lvl == 1)
+               gameState = 20;
+
+               if(lvl == 2)
                gameState = 3;
+
           } // Entered block 1, Win game!!
+     }
+     if (gameState == 20) //lvl2
+     {
+          imageFullScr(4);
+          timer += 1 * fps;
+          if (timer > 2000)
+          {
+               fade = 0;
+               timer = 0;
+               gameState = 2;
+               init2();
+
+          }
      }
 
      if (gameState == 3)
